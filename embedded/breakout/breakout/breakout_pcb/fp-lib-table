@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name footprints)(type KiCad)(uri ${KIPRJMOD}/footprints.pretty)(options "")(descr ""))
+  (lib (name 691214110002)(type KiCad)(uri ${KIPRJMOD}/691214110002)(options "")(descr ""))
+  (lib (name backplane_conn)(type KiCad)(uri ${KIPRJMOD}/backplane_conn)(options "")(descr ""))
+)

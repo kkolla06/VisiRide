@@ -1,0 +1,30 @@
+module on_board_computer (input logic CLOCK_50, input logic [3:0] KEY, output logic [7:0] LEDR,
+                                output logic DRAM_CLK, output logic DRAM_CKE, output logic DRAM_CAS_N,
+                                output logic DRAM_RAS_N, output logic DRAM_WE_N, output logic [12:0] DRAM_ADDR,
+                                output logic [1:0] DRAM_BA, output logic DRAM_CS_N, inout logic [15:0] DRAM_DQ,
+                                output logic DRAM_UDQM, output logic DRAM_LDQM, output logic [35:0] GPIO_0,
+                                input logic[35:0] GPIO_1);
+
+    system sys(.clk_clk(CLOCK_50),
+                .reset_reset_n(KEY[0]),
+                .sdram_clk_clk(DRAM_CLK),
+                .sdram_addr(DRAM_ADDR),
+                .sdram_ba(DRAM_BA),
+                .sdram_cas_n(DRAM_CAS_N),
+                .sdram_cke(DRAM_CKE),
+                .sdram_cs_n(DRAM_CS_N),
+                .sdram_dq(DRAM_DQ),
+                .sdram_dqm({DRAM_UDQM, DRAM_LDQM}),
+                .sdram_ras_n(DRAM_RAS_N),
+                .sdram_we_n(DRAM_WE_N),
+                .camera_rxd(GPIO_1[0]),
+                .camera_txd(GPIO_0[0]),
+                .cell_module_rxd(GPIO_1[6]),
+                .cell_module_txd(GPIO_0[6]),
+                .gps_rxd(GPIO_1[2]),
+                .gps_txd(GPIO_0[2]),
+                .led_export(LEDR),
+                .switch_export({4'd0, KEY}),
+                .gpio_out_export(GPIO_0[4]));
+
+endmodule: on_board_computer
