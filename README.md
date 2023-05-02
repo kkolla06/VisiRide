@@ -15,11 +15,13 @@ Located in `embedded/`
 
 DE1-SoC system was built using Quartus version 18.1 and embedded software compiled with included NIOS II build tools. 
 
+
 ### Cloud Server 
 * The server is entirely contained in server.js
 * facial_recognition library source: https://github.com/ageitgey/face_recognition
 
 Written in Node.js 
+
 
 ### User Application 
 Located in `dart/`
@@ -35,6 +37,9 @@ Located in `dart/`
  
  Apks were all built using Flutter in Android Studio.
  
+ 
 ### Cloud Database 
 * Endpoints for modifying the database are defined in `server.js`
 * MondoDB database is deployed on the cloud via an Azure VM
+
+Written in Node.js 
