@@ -1,4 +1,4 @@
-# VisiRide - l2a-10-cloudcrackers
+# VisiRide - 10-cloudcrackers
 ---
 Smart 2FA system for electric scooter rentals
 
